@@ -1,11 +1,10 @@
-
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
 const cookieOptions = {
   httpOnly: true,
-  secure: process.env.NODE_ENV === "production",
-  sameSite: "lax",
+  secure: true,          // Required when sameSite is 'none' (and Render uses HTTPS)
+  sameSite: "none",      // Required for cross-site requests between Vercel and Render
   path: "/",
 };
 
