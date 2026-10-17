@@ -943,21 +943,6 @@ export default function AdminDashboard() {
 
                       <td>
                         <div className="admin-actions">
-                          {blog.status === "published" &&
-                            blog.slug && (
-                              <Link
-                                to={`/blogs/${encodeURIComponent(
-                                  blog.slug
-                                )}`}
-                                className="btn btn-sm btn-light"
-                                title="View article"
-                                target="_blank"
-                                rel="noreferrer"
-                              >
-                                <FiEye />
-                              </Link>
-                            )}
-
                           <button
                             className="btn btn-sm btn-light"
                             onClick={() => openEditForm(blog)}
