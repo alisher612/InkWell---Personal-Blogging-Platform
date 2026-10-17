@@ -151,19 +151,6 @@ export default function AdminAnalytics() {
                             <td>{blog.title}</td>
                             <td>{blog.category}</td>
                             <td>{Number(blog.views || 0).toLocaleString()}</td>
-                            <td>
-                              {blog.status === "published" && blog.slug && (
-                                <Link
-                                  to={`/blogs/${encodeURIComponent(blog.slug)}`}
-                                  className="btn btn-sm btn-light border-0 text-secondary hover-primary rounded-2 p-2 d-inline-flex align-items-center justify-content-center"
-                                  title="View article"
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  <FiEye size={16} />
-                                </Link>
-                              )}
-                            </td>
                           </tr>
                         ))}
                       </tbody>
